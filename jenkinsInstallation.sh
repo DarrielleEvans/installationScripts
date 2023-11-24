@@ -10,5 +10,12 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 
 sudo apt update
 sudo apt install jenkins -y
+
+# Start Jenkins service
 sudo systemctl start jenkins
+
+# Enable Jenkins service to start on boot
+sudo systemctl enable jenkins
+
 sudo systemctl status jenkins >> ~/Status.txt
+
